@@ -1,0 +1,46 @@
+{
+  "name": "slickhub",
+  "version": "1.0.0",
+  "description": "React application to explore GitHub repositories",
+  "homepage": "https://david-spudic.com",
+  "private": true,
+  "author": "David Spudic <david.sp@sunrise.ch> (https://david-spudic.com)",
+  "dependencies": {
+    "gh-pages": "^3.1.0",
+    "material-ui": "^0.19.4",
+    "moment": "^2.29.1",
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-ga": "^2.3.5",
+    "react-octicons": "^0.2.0",
+    "react-slick": "^0.15.4",
+    "react-social-github": "^2.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d ./build -b gh-pages"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

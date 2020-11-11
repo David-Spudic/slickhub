@@ -1,0 +1,161 @@
+@import "shared/variables";
+
+.app {
+  min-width: 360px;
+
+  &-bar {
+    box-shadow: none !important;
+    border-bottom: 1px solid $color-border;
+
+    h1  {
+      font-weight: 700 !important;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &-filter {
+    display: none;
+  }
+
+  &-header {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: $sp-ul 0 0;
+    color: $color-text;
+
+    &--description {
+      margin: $sp-lg;
+
+      .headline {
+        max-width: 700px;
+        color: $color-text;
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 140%;
+        word-spacing: 0.1em;
+      }
+
+      .highlight {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-content {
+    z-index: 20;
+    background-color: $color-bg;
+  }
+
+  &-footer {
+    z-index: -1;
+    display: inline-block;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: $sp-md $sp-xl;
+    color: lighten($color-text, 70%);
+    text-align: center;
+    line-height: 140%;
+
+    a {
+      color: $color-text;
+    }
+  }
+}
+@media screen and (min-width: $mq-sm) {
+  .app {
+    margin: 0 auto;
+
+    &-bar {
+      position: relative !important;
+      padding-right: $sp-ul !important;
+      padding-left: $sp-ul !important;
+      background-color: transparent !important;
+      border-bottom: none;
+
+      h1 {
+        margin-top: 16px !important;
+        font-size: 32px !important;
+      }
+
+      &--options {
+        display: none !important;
+      }
+    }
+
+    &-filter {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin: 0 $sp-xl;
+
+      &--icon {
+        display: none;
+      }
+
+      &--option {
+        width: 80% !important;
+        font-size: 18px !important;
+      }
+    }
+
+    &-content,
+    &-header {
+      padding-right: $sp-xl;
+      padding-left: $sp-xl;
+    }
+
+    &-header {
+      padding-top: 0;
+
+      &--description {
+        margin: ($sp-xl + $sp-md) $sp-xl;
+      }
+    }
+
+    &-content {
+      margin-bottom: $sp-ul;
+    }
+  }
+}
+@media screen and (min-width: $mq-md) {
+  .app {
+  }
+}
+@media screen and (min-width: $mq-lg) {
+  .app {
+    &-header {
+      &--description {
+        .headline {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &-filter {
+      &--icon {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 16px;
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $mq-ul) {
+  .app {
+    max-width: $mq-ul;
+  }
+}

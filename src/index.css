@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f6f8; }
+
+.is-visible {
+  visibility: visible !important; }
+
+.is-displayed {
+  display: block !important; }
+
+.not-visible {
+  visibility: hidden !important; }
+
+.not-displayed {
+  display: none !important; }
