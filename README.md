@@ -1,10 +1,7 @@
 # SlickHub
-[https://vandreleal.github.io/slickhub](https://vandreleal.github.io/slickhub)
+[https://david-spudic.github.io/slickhub](https://david-spudic.github.io/slickhub)
 
 > React application to explore GitHub repositories.
-
-## Screenshot
-![SlickHub](https://raw.githubusercontent.com/vandreleal/slickhub/master/screenshots/01-slickhub_desktop.jpg)
 
 ## GitHub Search API Parameters
 + Criteria
